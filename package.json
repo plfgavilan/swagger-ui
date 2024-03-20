@@ -1,8 +1,8 @@
 {
   "name": "swagger-ui",
   "version": "5.12.0",
-  "main": "./dist/swagger-ui.js",
-  "module": "./dist/swagger-ui-es-bundle-core.js",
+  "main": "docs/swagger-ui.js",
+  "module": "docs/swagger-ui-es-bundle-core.js",
   "exports": {
     "./dist/swagger-ui.css": "./dist/swagger-ui.css",
     "./dist/oauth2-redirect.html": "./dist/oauth2-redirect.html",
@@ -37,7 +37,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "automated-release": "release-it -VV --config ./release/.release-it.json",
-    "build": "npm run build-stylesheets && rimraf ./dist/swagger-ui.js ./dist/swagger-ui.js.map && npm run build-all-bundles",
+    "build": "npm run build-stylesheets && rimraf docs/swagger-ui.js docs/swagger-ui.js.map && npm run build-all-bundles",
     "build-all-bundles": "run-p --aggregate-output build:core build:bundle build:standalone build:es:bundle build:es:bundle:core",
     "build-stylesheets": "cross-env NODE_ENV=production BABEL_ENV=production BROWSERSLIST_ENV=browser-production webpack --color --config webpack/stylesheets.js",
     "build:bundle": "cross-env NODE_ENV=production BABEL_ENV=production BROWSERSLIST_ENV=isomorphic-production webpack --color --config webpack/bundle.js",
@@ -45,7 +45,7 @@
     "build:standalone": "cross-env NODE_ENV=production BABEL_ENV=production BROWSERSLIST_ENV=browser-production webpack --color --config webpack/standalone.js",
     "build:es:bundle": "cross-env NODE_ENV=production BABEL_ENV=production BROWSERSLIST_ENV=isomorphic-production webpack --color --config webpack/es-bundle.js",
     "build:es:bundle:core": "cross-env NODE_ENV=production BABEL_ENV=esm BROWSERSLIST_ENV=browser-production webpack --color --config webpack/es-bundle-core.js",
-    "clean": "rimraf ./dist",
+    "clean": "rimraf docs",
     "postinstall": "patch-package",
     "dev": "cross-env NODE_ENV=development BABEL_ENV=development BROWSERSLIST_ENV=browser-development webpack serve --config webpack/dev.js",
     "deps-license": "license-checker --production --csv --out $npm_package_config_deps_check_dir/licenses.csv && license-checker --development --csv --out $npm_package_config_deps_check_dir/licenses-dev.csv",
@@ -68,7 +68,7 @@
     "security-audit": "run-s -sc security-audit:all security-audit:prod",
     "security-audit:prod": "npm-audit-ci-wrapper -p -t low",
     "security-audit:all": "npm-audit-ci-wrapper -t moderate",
-    "serve-static": "ws -d dist/ --hostname 0.0.0.0 -p 3002",
+    "serve-static": "ws -d docs/ --hostname 0.0.0.0 -p 3002",
     "start": "npm-run-all --parallel serve-static open-static"
   },
   "dependencies": {

@@ -48,22 +48,22 @@ The OpenAPI Specification has undergone 5 revisions since initial creation in 20
 ## Documentation
 
 #### Usage
-- [Installation](docs/usage/installation.md)
-- [Configuration](docs/usage/configuration.md)
-- [CORS](docs/usage/cors.md)
-- [OAuth2](docs/usage/oauth2.md)
-- [Deep Linking](docs/usage/deep-linking.md)
-- [Limitations](docs/usage/limitations.md)
-- [Version detection](docs/usage/version-detection.md)
+- [Installation](docs-repository/usage/installation.md)
+- [Configuration](docs-repository/usage/configuration.md)
+- [CORS](docs-repository/usage/cors.md)
+- [OAuth2](docs-repository/usage/oauth2.md)
+- [Deep Linking](docs-repository/usage/deep-linking.md)
+- [Limitations](docs-repository/usage/limitations.md)
+- [Version detection](docs-repository/usage/version-detection.md)
 
 #### Customization
-- [Overview](docs/customization/overview.md)
-- [Plugin API](docs/customization/plugin-api.md)
-- [Custom layout](docs/customization/custom-layout.md)
+- [Overview](docs-repository/customization/overview.md)
+- [Plugin API](docs-repository/customization/plugin-api.md)
+- [Custom layout](docs-repository/customization/custom-layout.md)
 
 #### Development
-- [Setting up](docs/development/setting-up.md)
-- [Scripts](docs/development/scripts.md)
+- [Setting up](docs-repository/development/setting-up.md)
+- [Scripts](docs-repository/development/scripts.md)
 
 #### Contributing
 - [Contributing](https://github.com/swagger-api/.github/blob/master/CONTRIBUTING.md)
